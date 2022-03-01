@@ -1,13 +1,16 @@
 package;
 
+import ControllableHero.ControllabeHero;
 import flixel.FlxState;
 import Hero;
 import ScreensaverHero;
+import ControllableHero;
 
 class PlayState extends FlxState
 {
 	var hero:Hero;
 	var screensaver:ScreensaverHero;
+	var controllableHero:ControllabeHero;
 	var x:Int = 0;
 
 	override public function create()
@@ -33,6 +36,8 @@ class PlayState extends FlxState
 			add(screensaver);
 			x++;
 		}
+		controllableHero = new ControllabeHero(300,300);
+		add(controllableHero);
 		
 	}
 
